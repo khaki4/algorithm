@@ -22,3 +22,17 @@ function genDP() {
   }
   return DP;
 }
+
+/**
+ *
+ * 재귀 풀이
+ */
+
+const go = (n) => {
+  if (DP[n]) return DP[n];
+  return (DP[n] = go(n - 1) + go(n - 2) + go(n - 3));
+};
+
+inputs.forEach((v) => {
+  console.log(go(v));
+});
