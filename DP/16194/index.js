@@ -1,0 +1,16 @@
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+const inputs = fs.readFileSync(filePath).toString().trim().split("\n");
+
+const n = Number(inputs[0]);
+const prices = inputs[1].split(" ").map(Number);
+const d = Array(1001).fill(-1);
+d[0] = 0;
+
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= i; j++) {
+    if (d[i] === -1 || d[i] > d[i - j] + prices[j - 1])
+      d[i] = d[i - j] + prices[j - 1];
+  }
+}
+console.log(d[n]);
