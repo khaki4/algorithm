@@ -1,12 +1,13 @@
-const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-const [n, k] = fs
-  .readFileSync(filePath)
-  .toString()
-  .trim()
-  .split(/\s/)
-  .map(Number);
+// const fs = require("fs");
+// const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+// const [n, k] = fs
+//   .readFileSync(filePath)
+//   .toString()
+//   .trim()
+//   .split(/\s/)
+//   .map(Number);
 
+const [n, k] = [20, 2];
 const d = Array.from(Array(k + 1), () => Array(n + 1).fill(0));
 
 d[0][0] = 1;
