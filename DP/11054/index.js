@@ -12,6 +12,7 @@ const d = Array(n).fill(0);
 const inc = Array(n).fill(1);
 const dec = Array(n).fill(1);
 
+
 for (let i = 0; i < n; i++) {
   for (let j = 0; j < i; j++) {
     if (a[j] < a[i]) {
