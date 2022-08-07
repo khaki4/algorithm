@@ -10,7 +10,7 @@ for (let i = 0; i < n; i++) {
   for (let j = 0; j < m; j++) {
     // a
     if (j + 3 < m) {
-      ans = Math.max(ans, a[i][j] + a[i][j + 1] + a[i][j + 2] + +a[i][j + 3]);
+      ans = Math.max(ans, a[i][j] + a[i][j + 1] + a[i][j + 2] + a[i][j + 3]);
     }
     // b
     if (i + 3 < n) {
@@ -52,7 +52,7 @@ for (let i = 0; i < n; i++) {
     if (i + 1 < n && j + 2 < m) {
       ans = Math.max(
         ans,
-        a[i + 1][j] + a[i + 1][j + 1] + a[i + 1][j + 2] + a[i][j + 1]
+        a[i + 1][j] + a[i + 1][j + 1] + a[i + 1][j + 2] + a[i][j + 2]
       );
     }
     // i
